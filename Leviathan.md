@@ -223,15 +223,20 @@ e junto com o nosso programa permite que eu execute um bash como um usuario de p
 
 ### Leviathan4
 
+
 >leviathan3@leviathan:~$ ls
 ```
 level3
 ```
+AAAAAAA mais um executavel!
+
 >leviathan3@leviathan:~$ ./level3
 ```
 Enter the password> sex
 bzzzzzzzzap. WRONG
 ```
+
+huuum... ltrace ?
 
 >leviathan3@leviathan:~$ ltrace ./level3
 ```
@@ -245,6 +250,8 @@ puts("bzzzzzzzzap. WRONG"bzzzzzzzzap. WRONG
 )                                                = 19
 +++ exited (status 0) +++
 ```
+
+EZ
 
 >leviathan3@leviathan:~$ ./level3
 ```
