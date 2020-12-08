@@ -3,7 +3,7 @@
 
 por **Bruno *"Space_Cowb0y"* Carvalho**
 
-### Leviathan1
+### Leviathan0
 
 É descrito que todas as informações dos problemas estão em suas respectivas /home/
 
@@ -21,7 +21,7 @@ nos revela uma pasta de nome .backup contendo um arquivo html "bookmarks.html" c
 > rioGegei8m
 
 
-### Leviathan2
+### Leviathan1
 
 >ls -asl
 
@@ -79,7 +79,7 @@ Wrong password, Good Bye ...
 
 ```
 
-Beleza! temos não só uma, como duas strings que podem ser usadas, love e secret! 
+Beleza! temos não só uma, como duas strings que podem ser usadas, love e secrf! 
 
 Mas para ambas...
 
@@ -141,7 +141,7 @@ ok.
 
 >ougahZi8Ta
 
-### Leviathan3
+### Leviathan2
 
 > ls -asl
 
@@ -221,7 +221,7 @@ e junto com o nosso programa permite que eu execute um bash como um usuario de p
 >Ahdiemoo1j
 
 
-### Leviathan4
+### Leviathan3
 
 
 >leviathan3@leviathan:~$ ls
@@ -265,25 +265,123 @@ $ cat /etc/leviathan*/leviathan4
 
 
 
-### Leviathan5
+### Leviathan4
+
+![Denovo](https://opinioesemsintoniapirata.files.wordpress.com/2019/04/e-la-vamos-nos-1.jpg)
+
+> leviathan4@leviathan:~$ ls -asl
+
+humm... lixeira ? 
+
+```
+total 24
+4 drwxr-xr-x  3 root root       4096 Aug 26  2019 .
+4 drwxr-xr-x 10 root root       4096 Aug 26  2019 ..
+4 -rw-r--r--  1 root root        220 May 15  2017 .bash_logout
+4 -rw-r--r--  1 root root       3526 May 15  2017 .bashrc
+4 -rw-r--r--  1 root root        675 May 15  2017 .profile
+4 dr-xr-x---  2 root leviathan4 4096 Aug 26  2019 .trash
+```
+>leviathan4@leviathan:~$ cd ./.trash/
+
+>leviathan4@leviathan:~/.trash$ ls
+```
+bin
+```
+
+>leviathan4@leviathan:~/.trash$ ./bin
+```
+01010100 01101001 01110100 01101000 00110100 01100011 01101111 01101011 01100101 01101001 00001010
+```
+Binario ... ok  vamos ao python.
+
+> leviathan4@leviathan:~/.trash$ python
+```
+Python 2.7.13 (default, Sep 26 2018, 18:42:22)
+[GCC 6.3.0 20170516] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+$>>> import binascii
+$>>> n = int('0101010001101001011101000110100000110100011000110110111101101011011001010110100100
+001010',2)
+$>>> binascii.unhexlify('%x' % n)
+'Tith4cokei\n'
+```
 
 **Flag**
->
+>Tith4cokei
 
+### Leviathan5
 
+> leviathan5@leviathan:~$ ls
+```
+leviathan5
+```
+Mais um executavel =(
+
+>leviathan5@leviathan:~$ ./leviathan5
+```
+Cannot find /tmp/file.log
+```
+humm ele procura por /tmp/file.log ? será que ele escreve algo no arquivo?
+
+>leviathan5@leviathan:~$ strings leviathan5
+
+é nada de util... vamos ver o que o l trace traz pra gente.
+
+>leviathan5@leviathan:~$ ltrace ./leviathan5
+```
+fopen("/tmp/file.log", "r")                               = 0x804b008
+.
+.
+.
+fgetc(0x804b008)                                          = '\377'
+feof(0x804b008)                                           = 1
+fclose(0x804b008)                                         = 0
+getuid()                                                  = 12005
+setuid(12005)                                             = 0
+unlink("/tmp/file.log")                                   = 0
++++ exited (status 0) +++
+```
+ok ok ok! ele pega meu uid e set ele pro arquivo e deepois da unlink... perai unlink? se me deu uma ideia!
+
+>leviathan5@leviathan:~$ ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+
+>leviathan5@leviathan:~$ ./leviathan5
+
+Boa! essa foi complicadinha!
+
+**Flag**
+>UgaoFee4li
 
 ### Leviathan6
 
+>leviathan6@leviathan:~$ ls
+```
+leviathan6
+```
+>leviathan6@leviathan:~$ ./leviathan6
+```
+usage: ./leviathan6 <4 digit code>
+```
+>leviathan6@leviathan:~$ ./leviathan6 1337
+```
+Wrong
+```
+
+>for x in {0000..9999}; do ./leviathan6 $i; done
+```
+$
+$cat /etc/levithan*/leviathan7
+```
+
 **Flag**
->
-
-
+>ahy7MaeBo9
 
 ### Leviathan7
 
-**Flag**
->
-
-
-
-
+>leviathan7@leviathan:~$ ls
+```
+CONGRATULATIONS
+leviathan7@leviathan:~$ cat CONGRATULATIONS
+Well Done, you seem to have used a *nix system before, now try something more serious.
+```
